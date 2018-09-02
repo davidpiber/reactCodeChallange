@@ -4,7 +4,9 @@ const Post = (props) => {
     const { post } = props;
     return (
         <div className="card">
-        <span>{post.printCreatedDate().toString()}</span>
+        <strong>{post.getAuthor()}</strong>
+        <br/>
+        <span>{post.printCreatedDate()}</span>
         <br/>
             <img className="card-img-top" src={post.getTumbNail()} alt=''/>
             <div className="card-body">
